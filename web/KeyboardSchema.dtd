@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/KeyboardSchema.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE xs:schema SYSTEM "KeyboardSchema.dtd">
+
+    <xs:schema>
+    ...
+    </xs:schema>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT xs:schema (xs:element|xs:complexType)*>
+<!ATTLIST xs:schema
+    version CDATA #IMPLIED
+    targetNamespace CDATA #IMPLIED
+    elementFormDefault CDATA #IMPLIED
+    xmlns CDATA #IMPLIED
+    xmlns:xs CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT xs:complexType (xs:attribute|xs:sequence)*>
+<!ATTLIST xs:complexType
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT xs:sequence (xs:element)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT xs:element EMPTY>
+<!ATTLIST xs:element
+    name CDATA #IMPLIED
+    type CDATA #IMPLIED
+    maxOccurs CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT xs:attribute EMPTY>
+<!ATTLIST xs:attribute
+    name CDATA #IMPLIED
+  >
